@@ -1,4 +1,4 @@
-#include "array.h"
+﻿#include "array.h"
 #include <iostream>
 
 using namespace std;
@@ -29,7 +29,7 @@ void task1(Array* arr)
     }
 }
 
-void task2(Array *arr)
+void task2(Array* arr)
 {
     size_t size = array_size(arr);
     bool* isDivisible = new bool[size];
@@ -41,11 +41,12 @@ void task2(Array *arr)
 
     for (size_t i = 0; i < size; i++)
     {
-        for (size_t j = i + 1; j < size; j++)
+        for (size_t j = 0; j < size; j++)
         {
-            if (array_get(arr, i) % array_get(arr, j) == 0)
+            if (i != j && array_get(arr, i) % array_get(arr, j) == 0)
             {
                 isDivisible[i] = true;
+                break;
             }
         }
     }
@@ -60,6 +61,7 @@ void task2(Array *arr)
 
     delete[] isDivisible;
 }
+
 
 void CreateArray(Array* arr) {
     size_t size = array_size(arr);
@@ -87,4 +89,3 @@ int main()
     task2(arr);
     array_delete(arr);
 }
-
