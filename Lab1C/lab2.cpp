@@ -4,6 +4,7 @@
 #include "list.h"
 #include "stack.h"
 
+//Лабораторная работа №2
 
 bool check(const std::string& html) {
     Stack* stack = stack_create();
