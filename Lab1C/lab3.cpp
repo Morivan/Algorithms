@@ -88,7 +88,6 @@ int main()
             }
         }
     }
-
     queue_delete(nodes_for_visit);
 
     if (distance_found)
