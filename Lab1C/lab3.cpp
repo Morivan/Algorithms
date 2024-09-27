@@ -90,7 +90,6 @@ int main()
             }
         }
     }
-
     queue_delete(nodes_for_visit);
 
     if (path_found)
